@@ -24,7 +24,7 @@ resource "azurerm_service_plan" "serverfarm" {
   tags                = var.additional_tags
 
   os_type  = "Windows"
-  sku_name = "Y1"
+  sku_name = "B1"
 
   lifecycle {
     ignore_changes = [
