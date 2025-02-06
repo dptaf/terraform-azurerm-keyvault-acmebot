@@ -121,7 +121,6 @@ resource "azurerm_windows_function_app" "function" {
     ftps_state                             = "Disabled"
     minimum_tls_version                    = "1.2"
     scm_minimum_tls_version                = "1.2"
-    scm_use_main_ip_restriction            = true
     vnet_route_all_enabled                 = true
     scm_use_main_ip_restriction            = false
     application_stack {
