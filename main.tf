@@ -25,7 +25,7 @@ resource "azurerm_service_plan" "serverfarm" {
   tags                = var.additional_tags
 
   os_type  = "Windows"
-  sku_name = "Y1"
+  sku_name = "B1"
 
   lifecycle {
     ignore_changes = [
@@ -121,7 +121,8 @@ resource "azurerm_windows_function_app" "function" {
     ftps_state                             = "Disabled"
     minimum_tls_version                    = "1.2"
     scm_minimum_tls_version                = "1.2"
-    scm_use_main_ip_restriction            = true
+    scm_use_main_ip_restriction            = false
+    vnet_route_all_enabled                 = true
 
     application_stack {
       dotnet_version = "v6.0"
